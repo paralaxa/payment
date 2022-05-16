@@ -20,7 +20,7 @@ public class SagaRouterBuilder extends RouteBuilder {
 
     from("kafka:order")
         .saga()
-        .propagation(SagaPropagation.REQUIRED)
+        .propagation(SagaPropagation.MANDATORY)
         .bean(paymentCommandHandler,
             "handleOrder")
         .to("kafka:paymentUpdates");//todo kafkaCommandHandler#publish ChargeCreditCard (command)

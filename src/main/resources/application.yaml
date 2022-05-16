@@ -11,5 +11,6 @@ camel:
       brokers: localhost:9092
       valueDeserializer: sk.stopangin.payment.common.EventSerde
       valueSerializer: sk.stopangin.payment.common.EventSerde
+      headerDeserializer: org.apache.kafka.common.serialization.StringDeserializer
 server:
   port: 8089
