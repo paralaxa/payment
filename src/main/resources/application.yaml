@@ -1,0 +1,15 @@
+camel:
+  service:
+    lra:
+      enabled: true
+  lra:
+    enabled: true
+    coordinator-url: http://localhost:80
+    local-participant-url: http://host.docker.internal:8183
+  component:
+    kafka:
+      brokers: localhost:9092
+      valueDeserializer: sk.stopangin.payment.common.EventSerde
+      valueSerializer: sk.stopangin.payment.common.EventSerde
+server:
+  port: 8089
